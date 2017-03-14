@@ -1,0 +1,30 @@
+for count:1..13
+    put count,", "..
+end for
+
+
+var integer:int
+put"please enter a integer!"
+get integer
+for count:0..13
+    put count*integer
+end for
+
+
+for i:1..15
+    color(red) put i 
+end for
+
+
+var star: string
+star:="*"
+for i:1..21
+    put star
+    star+="*"
+end for
+
+
+for i:2..20 by 2
+    put i**2
+end for
+
