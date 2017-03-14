@@ -1,0 +1,68 @@
+var radius: real
+var area: real
+var circumfrence: real
+put "What is the radius of the circle in meters?"..
+get radius
+area:= 3.14*radius**2
+circumfrence:= 2*3.14*radius
+put "The area of the circle is " ,area, " meters squared."
+put "The circumfrence of the circle is " ,circumfrence, " meters."
+
+
+
+var loan: real
+var rate: real
+var interest_owing:real
+put "What is your principle amount of a loan?"
+get loan
+put "What is the interest rate(in decimals)?"
+get rate
+interest_owing:= rate*loan*1
+put "The interest owing for one year is ",  interest_owing , " dollars."
+
+
+var price: real
+var pst: real 
+var gst: real 
+var total: real
+put "What is the cost of the item?".. 
+get price
+pst:= price*0.07
+gst:=price*0.05
+total:= pst+gst+price
+put "the price of the item is ", price, " dollars."
+put "The GST is " ,gst, " dollars."
+put "The PST is " ,pst, " dollars."
+put "The total is " ,total, " dollars."
+
+
+var in1: int
+var in2: int
+var product: int
+var quotient: real
+var sum: int
+var difference: int
+put "give an integer"..
+get in1
+put "give another integer"..
+get in2
+product:= in1*in2
+quotient:= in1/in2
+sum:=in1+in2
+difference:=in1-in2
+put "The product is " ,product, "."
+put "The quotient is " ,quotient, "."
+put "The sum is " ,sum, "."
+put "The difference is ",difference
+
+
+
+var area1:real
+var side: real
+var perimeter: real
+put "what is the area of the a square?"..
+get area1
+side:= sqrt(area1)
+perimeter:= side*4
+put "The side length is ",side, "."
+put "The perimeter of the square is ",perimeter, "."
