@@ -1,0 +1,117 @@
+var number: int
+put "Please give a integer"..
+get number
+if number mod 7 = 0 then
+   put"The number is a multiple of 7!"
+else
+   put"The number is not a multiple of 7."
+end if
+
+
+
+var student: int
+const GROUP:=4
+var leftover: int
+var groups: int
+put"How many students are in your class?"
+get student
+leftover:=student mod GROUP
+groups:=student div GROUP
+put"There will be " ,groups, " groups of 4."
+if leftover=0 then
+   put"There are no students left over!"
+else
+   put"There here are " ,leftover," students left over."
+end if
+ 
+
+
+var price: real
+const GST:=0.5
+const PST:=0.8
+var total: real
+put"What is the price of your item?"
+get price
+total:=price+(price*GST*PST)
+if price>= 4.99 then
+   put"The final price is ",total," dollars."
+else
+   put"The final price is ",price, "."
+end if
+
+
+var mark: real
+put"What is your mark?"
+get mark
+if mark>=50 then
+   put"Congrads, you passed!"
+else
+   put"You failed!"
+end if
+
+
+
+var thecolour: string
+put"Please enter a colour!"..
+get thecolour 
+if thecolour="red" then
+   colour(red)
+   put"Thank you!"
+elsif
+   thecolour="blue" then
+   colour(blue)
+   put"Thank you!"
+else
+   put"thank you!"
+end if
+
+
+var inches:real
+var cm:real
+var answer: string
+const CONVERSION:=0.39
+colour(black)
+put"Would you like to convert from centimeters to inches?"
+get answer
+if answer= "yes" then
+   put"What is the measuremment in cm?"
+   get cm
+   put cm,"cm is equiqlent to " ,cm*CONVERSION, " inches"
+else
+   put"What is the measuremment in inches?"
+   get inches
+   put inches,"inches is equiqlent to " ,inches/CONVERSION, " inches"
+end if
+
+
+var fullname: string
+var street_address: string
+var city:string
+var country:string
+var province: string
+var postalcode: string
+var state:string
+put"What is your full name?"..
+get fullname: *
+put"What is your street adress?"..
+get street_address: *
+put"What city do you live in?"..
+get city: *
+put "What country do you live in(Capitalize)?"..
+get country: *
+if country="Canada" then
+   put"Which province do you live in?"..
+   get province: *
+   put"What's your postal code?"..
+   get postalcode: *
+   put"Your full address is ",",",fullname,",",street_address,",",city,",",province,",",postalcode,",",country,"."
+else 
+   put "Which US state do you live in?"..
+   get state: *
+   put"What's your postal code?"..
+   get postalcode: *
+   put"Your full address is ",",",fullname,",",street_address,",",city,",",state,",",postalcode,",",country,"."
+end if
+
+   
+   
