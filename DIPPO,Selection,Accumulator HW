@@ -1,0 +1,25 @@
+var amount: real
+var price: real
+var newprice: real
+var total: real 
+total:= 0
+put "What is the price of the item?"..
+get price
+put "How many of this item do you want?"..
+get amount
+newprice:= price*amount
+total += newprice
+put "What is the price of the item?"..
+get price
+put "How many of this item do you want?"..
+get amount
+newprice:= price*amount
+total += newprice
+put "What is the price of the item?"..
+get price
+put "How many of this item do you want?"..
+get amount
+newprice:= price*amount
+total += newprice
+total:= total*1.13
+put "The total is " ,total," dollars."
