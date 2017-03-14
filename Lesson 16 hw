@@ -1,0 +1,109 @@
+var lastname:string
+put"what is your last name(Capitalize please)?"..
+get lastname
+if lastname>="A" and lastname<="H" then
+   put"You are in group 1, who's last name is A-H"
+elsif lastname>="I" and lastname<="Z" then
+   put"You are in group 2, who's last name is I-Z"
+end if
+
+var cost:real
+const TAX:=0.07
+put"What is the cost for your meal?"..
+get cost
+if cost>4 then
+   put"The final cost is $",cost+(cost*0.07),"."
+else 
+   put"The final cost is $",cost,"."
+end if
+
+
+var income:real
+const TAX1:= 0.17
+const TAX2:= 0.24
+const TAX3:= 0.29
+put"What is your income?"
+get income
+if income<=27500 then
+   put"Your federal tax payment is $ ",income*TAX1,"."
+elsif income>27500 and income<=55000 then
+   put"Your federal tax payment is $ ",27500*TAX1+(income-27500)*TAX2,"."
+elsif income>55000 then
+   put"Your federal tax payment is $ ",27500*TAX1 + 27500*TAX2+(income-55000)*TAX3, "."
+end if
+
+
+var occasion: string
+var name:string
+put"What is your full name?"
+get name:*
+put"Choose from one of the following occasions?"
+put"Interview"
+put"Meeting new friends"
+put"Christmas"
+put"New year"
+get occasion
+case occasion of
+     label"Interview","interview":put"The proper greeting is Hello! my name is ",name,", It is such an honor to meet you!"
+     label"Meeting new friends","meeting new friends":put"The proper greeting is Hey! Nice to meet you! my name is ",name,"."
+     label"Christmas","christmas":put"The proper greeting is wishing you and your family a Merry Christmas!"
+     label"New year","new year":put"The proper greeting is Happy New year! I am so lucky to have met you!"
+end case
+   
+
+var mark1:int
+var mark2:int
+var mark3:int
+var mark4:int
+var mark5:int
+put"Please enter 5 marks!(separate with spaces)"
+get mark1,mark2,mark3,mark4,mark5
+put"Here are your evaluations!"
+if mark1>= 70 and mark1<=100 then
+   put "ÒgoodÓ"
+elsif mark1>= 50 and mark1<=69 then
+   put"ÒsatisfactoryÓ"
+elsif mark1>= 0 and mark1<=49 then
+   put"Ònon satisfactoryÓ"
+else
+   put"Sorry! Error."
+end if
+if mark2>=70 and mark2<=100 then
+   put"ÒgoodÓ"
+elsif mark2>=50 and mark2<=69 then
+   put"ÒsatisfactoryÓ"
+elsif mark2>=0 and mark2<=49 then
+   put"Ònon satisfactoryÓ"
+else
+   put"Sorry! Error."
+end if
+if mark3>=70 and mark3<=100 then
+   put"ÒgoodÓ"
+elsif mark3>=50 and mark3<=69 then
+   put"ÒsatisfactoryÓ"
+elsif mark3>=0 and mark3<=49 then
+   put"Ònon satisfactoryÓ"
+else
+   put"Sorry! Error."
+end if
+   if mark4>=70 and mark4<=100 then
+   put"ÒgoodÓ"
+elsif mark4>=50 and mark4<=69 then
+   put"ÒsatisfactoryÓ"
+elsif mark4>=0 and mark4<=49 then
+   put"Ònon satisfactoryÓ"
+else
+   put"Sorry! Error."
+end if
+if mark5>=70 and mark5<=100 then
+   put"ÒgoodÓ"
+elsif mark5>=50 and mark5<=69 then
+   put"ÒsatisfactoryÓ"
+elsif mark5>=0 and mark5<=49 then
+   put"Ònon satisfactoryÓ"
+else
+   put"Sorry! Error."
+end if  
+   
+      
+
