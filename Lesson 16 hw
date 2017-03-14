@@ -1,3 +1,57 @@
+var expenses:real
+const PRICE:=65
+var newexpense:real
+var breakeven:real
+put"What are the expenses?"
+get expenses
+newexpense:= expenses+100
+breakeven:= ceil(newexpense/PRICE)
+put"You must sell ", breakeven," tickets to break even."
+
+
+
+var name:string
+var mark1,mark2,mark3,mark4,mark5:real
+var total1,total2,total3,total4,total5:real
+var percent1,percent2,percent3,percent4,percent5:real
+var average:real
+put"What is yur full name?"..
+get name:*
+put"What mark did you you recieve on your first test?"..
+get mark1
+put"What was the test marked out of?"..
+get total1
+put"What mark did you you recieve on your second test?"..
+get mark2
+put"What was the test marked out of?"..
+get total2
+put"What mark did you you recieve on your third test?"..
+get mark3
+put"What was the test marked out of?"..
+get total3
+put"What mark did you you recieve on your forth test?"..
+get mark4
+put"What was the test marked out of?"..
+get total4
+put"What mark did you you recieve on your fifth test?"..
+get mark5
+put"What was the test marked out of?"..
+get total5
+percent1:=mark1/total1*100
+percent2:=mark2/total2*100
+percent3:=mark3/total3*100
+percent4:=mark4/total4*100
+percent5:=mark5/total5*100
+put"Here are the results:"
+put"Name: ",name,"."
+put "Test 1: ",percent1,"%"
+put"Test 2: ",percent2,"%"
+put"Test 3: ",percent3,"%"
+put"Test 4: ",percent4,"%"
+put"Test 5: ",percent5,"%"
+average:=(percent1+percent2+percent3+percent4+percent5)/5
+put"Your average is ",average:0:0,"%"
+
 var lastname:string
 put"what is your last name(Capitalize please)?"..
 get lastname
