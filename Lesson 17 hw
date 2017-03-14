@@ -1,0 +1,55 @@
+var name:string
+put"This is a program for greetings! Please enter exit when done!"
+loop
+    put"What is your name?"
+    get name:*
+    exit when name= "exit"
+    put"Hello ",name, " ,nice to meet you!"
+end loop
+put "Thanks for using our program."
+
+var word:string
+var total:int:=0
+put"This is  program to count words."
+put"Please enter exit to exit."
+loop
+   put"What is the word(single word)?"
+   get word
+   exit when word= "exit"
+   total+=1
+end loop
+put"The total number of words is ",total,"."
+   
+%compute the area of a shape for squares, triangles, rectangles, and circles
+var square:real
+var triangle:real
+var rectangle:real
+var circle:real
+var shape:string
+var width:real
+var len:real
+var height:real
+var radius:real
+const PI:= 3.14
+put "This is a program to calculate the area of squares,triangles,rectangles and circles!"
+put"To exit the program please enter exit!"
+loop
+   put"What shape would you like to calcuate the area of"
+   get shape
+   exit when shape="exit"
+   case shape of
+       label"square":put"What is the width of the square?"
+       get width
+       put"Tha area is ",width**2,"."
+       label"rectangle":put"What is the length and width?(Seperate the two with a space)"
+       get width,len
+       put"The area is ",len*width,"."
+       label"triangle":put"What is the width and height?(Seperate the two with a space)"
+       get width,height
+       put"The area is ",(height*width)/2,"."
+       label"circle":put"What is the radius of the circle?"
+       get radius
+       put"Tha area is ",PI*radius**2,"."
+    end case
+end loop
+put"Thank you for using our program!"
