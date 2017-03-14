@@ -1,0 +1,49 @@
+var inches: real
+var formula: real
+put "What is the measurement in inches?"
+get inches
+formula:= inches*2.45
+put "The conversion is ",formula, "."
+
+
+
+var birthyear: int
+var age: int
+put "Which year were you born?"
+get birthyear
+age:= 2017-birthyear
+put "Your age is " ,age, "."
+
+var name: string
+var address: string
+var city: string
+var province: string
+var postalcode: string
+put "What is your full name?"
+get name:*
+put "What is your address?"
+get address:*
+put "Which city do you live in?"
+get city
+put "Which province do you live in?"
+get province:*
+put "What is your postal code?"
+get postalcode:*
+put "Your full  agress is " ,",", name ,",", address ,",", city ,",", province ,",", postalcode, "."
+
+var name1: string
+var name2: string
+var name3: string
+var name4: string
+var name5: string
+put "What is your name?"
+get name1
+put "What is your mom's name?"
+get name2
+put "What is your dad's name?"
+get name3
+put "What is your best friend's name?"
+get name4
+put "What is the name of your pet?"
+get name5
+put "Here are the names in reverse order", "," ,name5, "," ,name4 , "," , name3 , "," ,name2 , "," ,name1, "."
