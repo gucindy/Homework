@@ -1,0 +1,74 @@
+var integer: int
+put"Please enter a non zero integer."
+put"enter 0 to end the program"
+loop
+   put"What is the integer?"
+   get integer
+   exit when integer=0
+   if integer>0 then
+      put"The opposite of ",integer," is ",integer*-1,"."
+   elsif integer<0 then
+      put"The opposite of ",integer," is ",integer*-1,"."
+   end if
+end loop
+put"Thanks for using the program!"
+
+
+var integer1:int
+var positive:int:=0
+var negative:int:=0
+put"Please enter a non zero integer."
+put"enter 0 to end the program"
+loop
+   put"What is the integer?"
+   get integer1
+   exit when integer1=0
+   if integer1>0 then
+      positive+=1
+   elsif integer1<0 then
+      negative+=1
+   end if
+end loop
+put"There are ",positive," positive numbers." 
+put"There are ",negative," negative numbers."    
+   
+   
+
+var number1:int
+var type1:string
+var cost:real
+var number2:int
+var total:real:=0
+var total_a:real:=0
+var numbera:int
+var numbers:int
+var numberc:int
+put"Enter exit to end the program"
+loop
+   put"What type of ticket do you need?(adult,children or senior)"
+   get type1
+   exit when type1="exit"
+   put"What are the number of tickets required for that type?"
+   get number1
+   if type1="adult" then
+      total+=10*number1
+   elsif type1="children" then
+      total+=5*number1
+   elsif type1="senior" then
+      total+=7.5*number1
+   else
+      put"Sorry!That is not a valid type!"
+   end if
+end loop
+put"The cost of admission is $",total,"."
+
+put"How many adult tickets were sold?"
+get numbera
+put"The children tickets were sold?"
+get numberc
+put"The senior tickets were sold?"
+get numbers
+put"Here are the number of ticket sold and value"
+put"You sold ",numbera," adult tickets and made $",numbera*10,"."
+put"You sold ",numberc," children tickets and made $",numberc*5,"."
+put"You sold ",numbers," senior tickets and made $",numbers*7.5,"."
