@@ -1,0 +1,34 @@
+var number1 : int
+var number2 : int
+var total: int:=0
+put "Please enter two positive integers(the first lower than the second). "
+get number1, number2
+if number1 >= number2 then
+   put "Sorry!Invalid number!"
+end if
+for i:number1..number2
+    if i=number2 then
+        put i,"="..
+    else
+        put i,"+"..
+    end if
+    total+=i
+end for
+put total
+
+%The country A has 50M inhabitants, and its population grows 3% per year. The country B, 70M and grows 2% per year. Determine in how many years the population of country A will surpass country B.
+const POP1:=50
+const POP2:=70
+const GROW1:=1.03
+const GROW2:=1.02
+var year:int:=0
+var A:real:=0
+var B:real:=0
+loop
+    year+=1
+    A+=POP1*GROW1**year
+    B+=POP2*GROW2**year
+    exit when A>B
+end loop
+put"In ",year," years the population of country A will surpass country B."
+
