@@ -1,0 +1,26 @@
+%a and %b
+var sum : int := 0
+for i : 1 .. 8
+    put i ** 3
+    sum += i ** 3
+end for
+put "The sum of those numbers is ", sum, "."
+%c
+var sum1 : int := 0
+var number : int
+put "What is the greatest number you would like to cube?" ..
+get number
+for i : 1 .. number
+    put i ** 3
+end for
+%d
+var sum2 : int := 0
+var number1 : int
+var number2 : int
+put "What is the greatest number you would like to cube?" ..
+get number2
+put "What is the smallest number you would like to cube?" ..
+get number1
+for i : number1 .. number2
+    put i ** 3
+end for
