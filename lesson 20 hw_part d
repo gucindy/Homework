@@ -1,0 +1,24 @@
+var number1 : int
+var number2 : int
+const NUMBER := 2
+loop
+    put "Please enter 2 numbers!(seperate with spaces)"
+    get number1, number2
+    exit when number1 = 0 and number2 = 0
+    put "The average is ", (number1 + number2) / NUMBER, "."
+end loop
+put "Thanks for using the program!"
+
+%Julia has $300 in her bank account earning 1.25% interest while Max has only $280 but he earns 2% interest. How many years before Max has more money in his account than Julia?
+const J := 0.0125
+const M := 0.02
+var year : int:=0
+var julia: real:=0
+var Max: real:=0
+loop
+    year += 1
+    julia+=300 * J * year+300
+    Max += 280* M * year+280
+    exit when Max>julia
+end loop
+put year, " years before Max has more money than Julia."
