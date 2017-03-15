@@ -1,0 +1,23 @@
+var number1 : int
+var number2 : int
+put "Please enter 2 even integers(seperate with spaces)."
+get number1, number2
+if number1 > number2 then
+    for decreasing i : number1 .. number2 by 2
+        put i," "..
+    end for
+elsif number2>number1 then
+    for i : number1 .. number2 by 2
+    put i, " " ..
+    end for
+end if
+  
+
+var number:int
+put"Please enter a whole number."
+get number
+for i:1..number 
+    if number mod i =0 then
+    put i," "..
+    end if
+end for
