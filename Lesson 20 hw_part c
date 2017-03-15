@@ -1,0 +1,20 @@
+var mark : real
+var total : int := 0
+for i : 1 .. 10
+    put "What is your mark?"
+    get mark
+    if mark >= 70 then
+        total += 1
+    end if
+end for
+put "There were ", total, " marks at least 70%."
+
+
+
+var temp : real
+loop
+    put "Please enter a temperature."
+    get temp
+    exit when temp>30
+end loop
+put"Wow, that's hot!"
