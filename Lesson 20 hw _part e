@@ -26,8 +26,8 @@ var A:real:=0
 var B:real:=0
 loop
     year+=1
-    A+=POP1*GROW1**year
-    B+=POP2*GROW2**year
+    a:=POP1*GROW1**year
+    B:=POP2*GROW2**year
     exit when A>B
 end loop
 put"In ",year," years the population of country A will surpass country B."
