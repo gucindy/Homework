@@ -1,0 +1,52 @@
+for decreasing row : 5 .. 1
+    for i : 1 .. row
+        put "*" ..
+    end for
+    put " "
+end for
+
+
+for decreasing row : 5 .. 1
+    for i : 1 .. row * 2
+        put "*" ..
+    end for
+    put " "
+end for
+
+
+for row : 1 .. 8
+    for i : 1 .. 10
+        put "*" ..
+    end for
+    put " "
+end for
+
+var rows : int
+put "How many rows would you like?"
+get rows
+for row : 1 .. rows
+    for i : 1 .. 10
+        put "*" ..
+    end for
+    put " "
+end for
+
+%This is incorrect!!!!!!!!
+for row : 1 .. 7 by 2
+    for i : 1 ..7 - row
+        put " " .. 
+    end for
+    for count:1..row
+        put "$"..
+    end for
+end for
+
+for row:1..5
+    for i:1..5-row
+        put" "..
+    end for
+    for count:1..row
+        put row ..
+    end for
+    put" "
+end for
