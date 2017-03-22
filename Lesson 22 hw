@@ -1,0 +1,68 @@
+var number: int
+put"What is the number?"
+get number
+put"The positive multiples of four are "..
+for i:1..number
+    if i= number then 
+        put " "
+    elsif i mod 4=0 then
+        put i,","..
+    end if
+end for
+
+
+%Write a program which asks the user for the weight of a set of packages. It should compute the average weight of the packages. Continue to accept package weights from the user until they enter zero. 
+%Bonus: Modify the program so that if the weight is negative you give the user an error message and ignore this weight in your average. 
+var weight: real
+var total:real:=0
+var number1:int:=0
+put"Enter zero to exit the program"
+loop
+    put"What is the weight of the package?"
+    get weight
+    exit when weight=0
+    if weight<0 then
+        put"Sorry! Error"
+    else
+        number1+=1
+        total+=weight
+    end if
+end loop   
+put"The average weight is ",total/number1, "."
+
+
+
+
+var height:real
+var measure:string
+var inches:real
+var cm:real
+const CONVERSION:=2.5
+const CONVERSION1:=0.0833333
+put"Please enter a height."
+get height
+put"Is the height in cm or inches?"
+get measure
+inches:=height/CONVERSION*0.0833333
+cm:=height*CONVERSION
+case measure of 
+    label"cm":
+        put"The height is ",inches, " inches."
+     label"inches":
+        put"The height is ",cm, "cm."    
+end case
+
+
+var integer:real
+const NUMBER:=10
+loop
+put"Please enter a integer!"
+get integer
+exit when integer mod 1=0
+if integer mod 1 not=0 then
+    put"ERROR!"
+end if
+end loop
+for i:1..NUMBER
+    put i,"*",integer,"=",integer*i
+end for
