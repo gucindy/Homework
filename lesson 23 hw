@@ -1,0 +1,50 @@
+var word:string
+var total:int:=0
+for i:1..10
+    put"Please enter a word:"..
+    get word
+    total+=length(word)
+end for
+put"The average length of the words entered is ", total /10,"."
+    
+var word1:string
+var total1:int:=0
+var number1:int:=0
+put"Please enter exit to exit"
+loop
+    put"Please enter a word:"
+    get word1
+    exit when word1="exit"
+    number1+=1
+    total+=length(word1)
+end loop
+put"The average length of the words entered is ", total1 / number1,"."
+
+
+var birthyear: string
+var integer:int
+var age: int
+put "Which year were you born?"
+get birthyear
+if strintok(birthyear) then
+    integer:=strint(birthyear)
+    age:= 2017-integer
+    put "Your age is " ,age, "."
+else 
+    put"you must enter an integer!"
+end if
+
+
+
+var birthyear1: string
+var integer1:int
+var age1: int
+loop
+    put "Which year were you born?"
+    get birthyear1
+    exit when strintok(birthyear1)
+    put"you must enter an integer!"
+end loop
+integer1:=strint(birthyear1)
+age1:= 2017-integer1
+put "Your age is " ,age1, "."
