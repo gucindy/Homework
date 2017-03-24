@@ -1,0 +1,70 @@
+var word : string
+put "Please enter done to exit!"
+loop
+    put "Please enter a word" ..
+    get word
+    exit when word = "done"
+    if length (word) < 2 then
+        put "ERROR!"
+    else
+        put "The first letter is ", word (1), "." ..
+        put "The last letter is ", word (*), "."
+    end if
+end loop
+
+
+
+var word1 : string
+var l : int := 0
+var longest : string := ""
+for i : 1 .. 10
+    put "Please enter a word:" ..
+    get word1
+    if length (word1) > l then
+        l := length (word1)
+        longest := word1
+    end if
+end for
+put "The longest word is ", longest, "."
+
+
+
+var word2 : string
+var vowel : int := 0
+put "Please enter a word:" ..
+get word2
+for i : 1 .. length (word2)
+    if word2 (i) = "a" or word2 (i) = "e" or word2 (i) = "i" or word2 (i) = "o" or word2 (i) = "u" then
+        vowel += 1
+    end if
+end for
+put "There are ", vowel, " vowels in your word!"
+
+
+var word3 : string
+put "please enter a word"
+get word3
+for i : 1 .. length (word3)
+    put word3(i)
+end for
+
+
+var word4 : string
+put "please enter a word"
+get word4
+for decreasing i :length(word4)..1
+    put word4(i)
+end for
+
+var word5: string
+put"Please enter a word"
+get word5
+for i:length(word5)..length(word5)
+    put word5(i)
+end for
+for i:2..length(word5)-1
+    put word5(i)
+end for    
+for i:1..1
+    put word5(i)
+end for    
