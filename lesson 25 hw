@@ -1,0 +1,80 @@
+var word : string
+var newword : string := ""
+put "Please enter a word"
+get word
+for i : 1 .. length (word)
+    if index (word (i), "d") = 0 then
+        newword += word (i)
+    end if
+end for
+put "The new word is ", newword, "."
+
+
+var word1 : string
+var newword1 : string := ""
+put "Please enter a word" ..
+get word1
+for i : 1 .. length (word1)
+    if index ("aeiouAEIOU", word (i)) = 0 then
+        newword1 += word1 (i)
+    end if
+end for
+put "The new word is ", newword1, "."
+
+
+
+var word2 : string
+put "Please enter a word: " ..
+get word2
+put word2 (length (word2) div 2 + 1 .. *) ..
+put word2 (1 .. length (word2) div 2)
+
+
+var word3 : string
+var newword3 : string := ""
+put "Please enter a word: " ..
+get word3
+for i : 1 .. length (word3)
+    if index ("aeiouAEIOU", word3 (i)) = 0 then
+        newword3 += word3 (i)
+    else
+        newword3 += "9"
+    end if
+end for
+put "The new word is ", newword3, "."
+
+var word4 : string
+var newword4 : string := ""
+put "Please enter a word: " ..
+get word4
+for i : 1 .. length (word4)
+    if index ("aeiouAEIOU", word4 (i)) not= 0 then
+        newword4 += word4 (i)
+    else
+        newword4 += "9"
+    end if
+end for
+put "The new word is ", newword4, "."
+
+
+%every vowel exchanged with its capital. For example: "colour" becomes "cOlOUr."
+var word5 : string
+var newword5 : string := ""
+put "Please enter a word: " ..
+get word5
+for i : 1 .. length(word5)
+    if index (word5 (i), "a") not= 0 then
+        newword5 += "A"
+    elsif index (word5 (i), "e") not= 0 then
+        newword5 += "E"
+    elsif index (word5 (i), "i") not= 0 then
+        newword5 += "I"
+    elsif index (word5 (i), "o") not= 0 then
+        newword5 += "O"
+    elsif index (word5 (i), "u") not= 0 then
+        newword5 += "U"
+    else
+        newword5 += word5(i)
+    end if
+end for
+put "The new word is ", newword5, "."
