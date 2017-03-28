@@ -1,0 +1,58 @@
+var word:string
+var newword:string:=""
+var number:int
+put"Please enter a word: "
+get word
+for i:1..length(word)
+if index("aeiou",word(i)) not=0 then
+    number:= ord (word(i))-ord("a")+ ord("A")
+    newword+=chr(number)
+else
+    newword+=word(i)
+end if
+end for
+put"The new word is ",newword,"."
+
+var word1:string
+var newword1:string:=""
+var number1:int
+put"Please enter a word: "
+get word1
+for i:1..length(word1)
+if index("aeiou",word1(i))=0 then
+    number1:= ord (word1(i))-ord("a")+ ord("A")
+    newword1+=chr(number1)
+else
+    newword1+=word1(i)
+end if
+end for
+put"The new word is ",newword1,"."
+
+var word2:string
+var newword2:string:=""
+var number2:int
+put"Please enter a word: "
+get word2
+for i:1..length(word2)
+    if i=1 then
+        newword2+=word(i)
+    else 
+        number2:=ord(word(i))-ord("a")+ord("A")
+        newword2+=chr(number2)
+    end if
+end for
+put"The new word is ",newword2,"."
+
+var word3:string
+var newword3:string:=""
+var number3:int
+put"Please enter a word: "
+get word3
+for i:1..length(word3)
+    if i mod 2 not=0 then
+        number3:=ord(word(i))-ord("a")+ord("A")
+        newword3+=chr(number3)
+    else 
+        newword3+=word(i)
+    end if
+end for
