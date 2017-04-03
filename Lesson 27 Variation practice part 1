@@ -1,0 +1,75 @@
+var word : string
+var order : string := "z"
+put "please enter exit to exit the program: "
+loop
+    put "Please enter a word :" ..
+    get word
+    exit when word = "exit"
+    if word < order then
+        order := word
+    end if
+end loop
+put "The alphebetically first word is ", order, "."
+
+%a
+var word1 : string
+var order1 : string := "a"
+put "please enter exit to exit the program: "
+loop
+    put "Please enter a word :" ..
+    get word1
+    exit when word1 = "exit"
+    if word1 > order1 then
+        order1 := word1
+    end if
+end loop
+put "The alphebetically last word is ", order1, "."
+
+%b
+var word2 : string
+var order2 : string := "z"
+put "please enter exit to exit the program: "
+loop
+    put "Please enter a word :" ..
+    get word2
+    exit when word2 = "exit"
+    if word2 < order2 and length (word2) = 7 then
+        order2 := word2
+    end if
+end loop
+put "The alphebetically first word is ", order2, "."
+
+
+
+%e
+var word3 : string
+var length3 : int := 100
+var shortword : string := ""
+put "please enter exit to exit the program: "
+loop
+    put "Please enter a word :" ..
+    get word3
+    exit when word3 = "exit"
+    if length (word3) < length3 then
+        length3 := length (word3)
+        shortword := word3
+    end if
+end loop
+put "The shortest word is ", shortword, "."
+
+
+
+%f
+var word4 : string
+var total : int := 0
+var wordtotal : int := 0
+var average : real
+put "please enter exit to exit the program: "
+loop
+    put "Please enter a word :" ..
+    get word4
+    exit when word4 = "exit"
+    total += length (word4)
+    wordtotal += 1
+end loop
+put "The average word length is ", total / wordtotal,"."
