@@ -1,0 +1,71 @@
+var word : string
+var newword : string := ""
+put "Please enter a word :" ..
+get word
+for i : 1 .. length (word)
+    if index ("aeiouAEIOU", word (i)) = 0 then
+        newword+="%"
+    else
+        newword+=word(i)
+    end if
+end for
+put"The newword is ",newword,"."
+    
+%a
+var word1 : string
+var newword1 : string := ""
+put "Please enter a word :" ..
+get word1
+for i : 1 .. length (word1)
+    if  word1 (i) ="r" then
+        newword1+="R"
+    else
+        newword1+=word1(i)
+    end if
+end for
+put"The newword is ",newword1,"."
+
+
+%b
+var word2 : string
+var newword2 : string := ""
+put "Please enter a word :" ..
+get word2
+for i : 1 .. length (word2)
+    if  ord(word2 (i))<ord("d") then
+        newword2+="*"
+    else
+        newword2+=word2(i)
+    end if
+end for
+put"The newword is ",newword2,"."
+
+
+%c
+var word3 : string
+var number:int
+var newword3 : string :=""
+put "Please enter a word :" ..
+get word3
+for i : 1 .. length (word3)
+      number:=ord(word3(i))+1
+      newword3+=chr(number)
+end for
+put"The newword is ",newword3,"."
+
+%d
+var word4 : string
+var number1:int
+var newword4 : string :=""
+put "Please enter a word :" ..
+get word4
+for i : 1 .. length (word4)
+    if word4(i)>="a" and word4(i)<="z" then
+      number1:=ord(word4(i))-ord("a")+ord("A")
+      newword4+=chr(number1)
+    else 
+      number1:=ord(word4(i))-ord("A")+ord("a")
+      newword4+=chr(number1)
+    end if
+end for
+put"The newword is ",newword4,"."
