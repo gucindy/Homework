@@ -1,0 +1,32 @@
+var word : string
+var remove : string
+var newword : string := ""
+put "Please enter a word :" ..
+get word
+put "What letters do you want to remove? :" ..
+get remove
+for i : 1 .. length (word)
+    if index (remove, word (i)) = 0 then
+        newword += word (i)
+    end if
+end for
+put "The newword is ", newword, "."
+
+var word1 : string
+var remove1 : string
+var newword1 : string := ""
+var no : string := ""
+put "Please enter a word :" ..
+get word1
+loop
+    put "What letters do you want to remove?"
+    get remove1
+    exit when remove1 = "exit"
+    no += remove1
+end loop
+for i : 1 .. length (word1)
+    if index (no, word1 (i))=0 then
+        newword1 += word1 (i)
+    end if
+end for
+put "The newword is ", newword1, "."
