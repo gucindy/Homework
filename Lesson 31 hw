@@ -1,0 +1,43 @@
+function number_subtract_5(number:real):real
+    var newnumber:real
+    newnumber:= number-5
+    result newnumber
+end number_subtract_5
+
+var number:real
+put"Please enter a real number:"..
+get number
+put"The number subtract 5 is ",number_subtract_5(number),"."
+
+
+function factorial(number:int):int
+    var number_factorial:int:=1
+    for i:1..number
+    number_factorial*=i
+    end for
+    result number_factorial
+end factorial
+
+put"Please enter 0 to end"
+loop
+var user_input:int
+put"Please enter a integer: "..
+get user_input
+exit when user_input=0
+put"The factorial is ",factorial(user_input),"."
+end loop
+put"Thanks for using the program!"
+
+
+function word_reversed(word:string):string
+    var newword:string:=""
+    for decreasing i:length(word)..1
+    newword+=word(i)
+    end for
+    result newword
+end word_reversed
+
+var user_word:string
+put"please enter a word:"..
+get user_word
+put"The word reversed is ",word_reversed(user_word),"."
