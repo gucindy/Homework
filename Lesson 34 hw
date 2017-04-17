@@ -1,0 +1,32 @@
+procedure output (integer : int, word : string)
+    for i : 1 .. integer
+        put word
+    end for
+end output
+
+output (5, "Melissa is nice! ")
+
+
+procedure stars (line_number : int)
+    for i : 1 .. line_number
+        put "*****"
+    end for
+end stars
+stars (7)
+var star : int
+put "How many lines would you like?"
+get star
+stars (star)
+
+
+
+procedure slant (rows : int)
+    for i:1..rows
+        for j:1..i
+        put" "..
+        end for
+        put "*"
+    end for
+end slant
+slant(7)
+slant(2)
