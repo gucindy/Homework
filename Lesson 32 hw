@@ -1,0 +1,62 @@
+function meters(length:real):real
+    var conversion:real
+    conversion:=length/100
+    result conversion
+end meters
+
+var cm:real
+put"Pleace enter a measurement in cm:"..
+get cm
+put"The length in meters is ",meters(cm),"."
+
+
+function area(height:real,base:real):real
+    result height*base/2
+end area
+
+put"The area of the this triangle is ",area(2,3),"."
+
+
+function find_y(m:real,x:real,b:real):real
+var y:real
+y:=m*x+b
+result y
+end find_y
+
+var x:real
+var m:real
+var b:real
+put"What is the slope?"
+get m
+put"What is te Y intercept?"
+get b
+put"Please enter 0 to exit."
+loop
+    put"What is the x value?"
+    get x
+    exit when x=0
+    put"The y value is ",find_y(m,x,b),"."
+end loop
+
+
+
+function vowel(letter:char):char
+    if index("aeiouAEIOU", letter) not=0 then
+        result "*"
+    else
+        result letter
+    end if
+end vowel
+
+
+var word:string
+var newword:string:=""
+put"Plese enter a word: "..
+get word
+for i:1..length(word)
+    newword+=vowel(word(i))
+end for
+put"The newword is ",newword,"."
+    
+    
+        
