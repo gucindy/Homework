@@ -1,0 +1,51 @@
+function replace_a (word : string) : string
+    var newword : string:=""
+    for i : 1 .. length (word)
+        if index (word (i), "a") not= 0 then
+            newword += "aa"
+        else
+            newword += word (i)
+        end if
+    end for
+    result newword
+end replace_a
+
+function replace_b (word : string) : string
+    var newword : string:=""
+    for i : 1 .. length (word)
+        if index (word (i), "b") not= 0 then
+            newword += "a c"
+        else
+            newword += word (i)
+        end if
+    end for
+    result newword
+end replace_b
+
+function insert_c (word : string) : string
+    var newword : string:=""
+    var integer : int
+    randint (integer, 1, length (word))
+    for i : 1 .. length (word)
+        if i = integer then
+            newword += "c"+ word(i)
+        else
+            newword += word (i)
+        end if
+    end for
+    result newword
+end insert_c
+
+var word : string
+var random : int
+put "Please enter a string of a`s b`s and c`s."
+get word
+randint (random, 1, 3)
+if random = 1 then
+    put "The newword is ", replace_a (word), "."
+elsif random = 2 then
+    put "The newword is ", replace_b (word), "."
+elsif random = 3 then
+    put "The newword is ", insert_c (word), "."
+end if
+
