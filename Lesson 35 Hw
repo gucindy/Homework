@@ -1,0 +1,68 @@
+procedure pattern (lines : int)
+    for decreasing i : lines .. 1
+        put repeat ("%", i) ..
+        put repeat ("&", i)
+    end for
+end pattern
+
+pattern (5)
+
+
+procedure pattern1 (lines : int)
+    for i : 1 .. lines
+        put repeat ("/*", i)
+    end for
+end pattern1
+
+pattern1 (4)
+
+
+procedure pattern2(lines:int)
+    for decreasing i:lines..1
+        put repeat(" ",lines-i)..
+        put repeat("*",i)
+    end for
+end pattern2
+
+pattern2(6)
+
+
+function area_of_triangle(length1:real,width:real):real
+    result length1*width/2
+end area_of_triangle
+
+
+function p_of_rec(length1:real,width:real):real
+    result 2*(length1+width)
+end p_of_rec
+
+function area_of_circle(radius:real):real
+    result 3.14*radius**2
+end area_of_circle
+
+var shape:string
+var length1,width,radius:real
+loop
+put"what shape are you in intrested in "..
+get shape:*
+if not(shape ="rectangle") or not(shape="triangle") or not(shape="circle") then
+    put"Sorry We do not recognize this shape!"
+else
+    exit
+end if
+end loop
+case shape of
+    label"rectangle":
+        put "Please enter the length and width:"..
+        get length1,width
+        put"The perimeter of the rectangle is ",p_of_rec(length1,width),"."
+   label "circle":
+        put "Please enter the radius:"..
+        get radius
+        put"The area of the circle is ",area_of_circle(radius),"."
+    label"triangle":
+        put "Please enter the length and width:"..
+        get length1,width
+        put"The area of the triangle is ",area_of_triangle(length1,width),"."
+end case
+
