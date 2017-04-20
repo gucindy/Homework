@@ -1,0 +1,57 @@
+procedure angles (ang1 : real, ang2 : real, ang3 : real)
+    if ang1 = ang2 and ang2 = ang3 then
+        put "The triangle is equilateral."
+    elsif ang1 = ang2 or ang2 = ang3 or ang1 = ang3 then
+        put "The triangle is isoceles."
+    else
+        put "The triangle is scalene."
+    end if
+end angles
+
+var angle1, angle2, angle3 : real
+loop
+    put "Please enter the angles of the triangles."
+    get angle1, angle2, angle3
+    exit when angle1 + angle2 + angle3 = 180
+    put "You did not enter the angles!"
+end loop
+angles (angle1, angle2, angle3)
+
+procedure pattern (max : int)
+    for i : 1 .. max
+        put " " ..
+        put repeat (intstr (i), i) ..
+    end for
+    put ""
+end pattern
+pattern (5)
+
+
+procedure pattern1 (width : int, height : int)
+    for i : 1 .. width
+        put "*" ..
+    end for
+    put ""
+    for j : 1 .. height - 1
+        put repeat (" ", width div 2) ..
+        put "*"
+    end for
+end pattern1
+pattern1 (7, 5)
+
+function isfactor (number : int, number2 : int) : boolean
+    if number2 mod number = 0 then
+        result true
+    else
+        result false
+    end if
+end isfactor
+
+var number, number1 : int
+put "Please enter 2 numbers"
+get number, number1
+if isfactor (number, number1) then
+    put "The first factor is a factor of the second!"
+else
+    put "The first factor is not a factor of the second!"
+end if
