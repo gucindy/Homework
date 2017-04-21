@@ -1,0 +1,14 @@
+import GUI
+
+procedure Hello
+    put"Hello!"
+end Hello
+
+
+var Hellobutton:int:=GUI.CreateButton(50,150,60,"Hello",Hello)
+var Exitbutton:int:=GUI.CreateButton(50,100,60,"Exit",GUI.Quit)
+
+
+loop
+    exit when GUI.ProcessEvent
+end loop
