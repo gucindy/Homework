@@ -1,0 +1,21 @@
+import GUI
+var textfield1,textfield2,textlabel1,textlabel2,quitbutton:int
+procedure remove_vowel(user:string)
+    var newword:string:=""
+    for i:1..length(user)
+        if index("AEIOUaeiou",user(i))=0 then
+            newword+=user(i)
+        end if
+    end for
+    GUI.SetText(textfield1,newword)
+end remove_vowel
+
+textfield1:=GUI.CreateTextField(100,100,150,"",remove_vowel)
+textlabel1:=GUI.CreateLabel(100,100+GUI.GetHeight(textfield1),"My Word")
+textfield2:=GUI.CreateTextField(300,100,150,"",remove_vowel)
+textlabel2:=GUI.CreateLabel(300,100+GUI.GetHeight(textfield2),"My word without vowels")
+quitbutton:=GUI.CreateButton(250,70,20,"QUIT",GUI.Quit)
+
+loop
+    exit when GUI.ProcessEvent
+end loop
