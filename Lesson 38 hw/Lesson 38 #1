@@ -1,0 +1,25 @@
+import GUI
+
+var field1,field2,label1,label2,done:int
+
+procedure conversion (user : string)
+    var inches:real
+    var inches1:string
+    inches:= strreal(user)*0.39
+    inches1:=realstr(inches,0)
+    GUI.SetText(field2,inches1)
+end conversion
+
+
+field1:=GUI.CreateTextField(50,150,150,"",conversion)
+label1:=GUI.CreateLabel(50,150+GUI.GetHeight(field1),"measurement in cm")
+field2:=GUI.CreateTextField(50,100,150,"",conversion)
+label2:=GUI.CreateLabel(50,100+GUI.GetHeight(field2),"measurement in inches ")
+done:=GUI.CreateButton(50,200,100,"Quit",GUI.Quit)
+
+loop
+    exit when GUI.ProcessEvent
+end loop
+
+
+
