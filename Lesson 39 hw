@@ -1,0 +1,38 @@
+import GUI
+var field1,field2,quitbutton,label1,label2,button1,button2:int
+
+View.Set ("graphics:600;420")
+Window.Set (defWinId, "title:conversion")
+GUI.SetBackgroundColour (grey)
+
+
+procedure convert
+    var conversion:real
+    var celcius:string:=GUI.GetText(field1)
+    conversion:=strreal(celcius)*1.8+32
+    GUI.SetText(field2,realstr(conversion,0))
+end convert
+
+
+procedure convert1
+var conversion:real
+var fahrenheit:string:=GUI.GetText(field2)
+    conversion:=(strreal(fahrenheit)-32)/1.8
+    GUI.SetText(field1,realstr(conversion,0))
+end convert1
+
+procedure dummy(text:string)
+end dummy
+
+field1:=GUI.CreateTextField(100,150,100,"",dummy)
+field2:=GUI.CreateTextField(460,150,100,"",dummy)
+label1:=GUI.CreateLabel(100,150+GUI.GetHeight(field1),"celcius:")
+label2:=GUI.CreateLabel(460,150+GUI.GetHeight(field2),"Fahrenheit:")
+button1:=GUI.CreateButton(250,150,150,"Convert to Fahrenheit",convert)
+button1:=GUI.CreateButton(250,50,150,"Convert to Celcius",convert1)
+quitbutton:=GUI.CreateButton(250,250,150,"Quit",GUI.Quit)
+
+
+loop
+    exit when GUI.ProcessEvent
+end loop
