@@ -1,0 +1,18 @@
+setscreen("graphics")
+var x,y,buttonNumber,buttonUpDown,xcoord,xcoord1,ycoord1,ycoord:int
+var circle:boolean:=false
+loop
+Mouse.ButtonWait("up",x,y,buttonNumber,buttonUpDown)
+circle:=not circle
+if circle then
+    cls
+    drawoval(maxx div 2,maxy div 2,30,30,black)
+else
+    cls
+    randint(xcoord,1,maxx)
+    randint(ycoord,1,maxy)
+    randint(xcoord1,1,maxx)
+    randint(ycoord1,1,maxy)
+    drawmapleleaf(xcoord,ycoord,xcoord1,ycoord1,red)
+end if
+end loop 
