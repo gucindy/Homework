@@ -1,0 +1,13 @@
+setscreen("graphics")
+var x,y,buttonNumber,buttonUpDown,color1:int
+var circle:boolean:=false
+loop
+Mouse.ButtonWait("up",x,y,buttonNumber,buttonUpDown)
+circle:=not circle
+if circle then
+    drawoval(maxx div 2,maxy div 2,30,30,black)
+else
+    randint(color1,1,255)
+    drawoval(maxx div 2,maxy div 2,30,30,color1)
+end if
+end loop 
