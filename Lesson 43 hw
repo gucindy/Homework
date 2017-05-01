@@ -1,0 +1,25 @@
+import GUI
+var text1, quit1, label1,filenumber : int
+var line : string
+
+procedure echo_content (name : string)
+    open : filenumber, name, get
+    if filenumber > 0 then
+        loop
+            exit when eof (filenumber)
+            get : filenumber, line : *
+            put line
+        end loop
+    else
+        put "Sorry we do not recognize the file!"
+    end if
+end echo_content
+
+text1 := GUI.CreateTextField (200, 100, 100, "", echo_content)
+label1 := GUI.CreateLabel (200, 100 + GUI.GetHeight (text1), "File Name:")
+quit1 := GUI.CreateButton (400, 100, 100, "QUIT", GUI.Quit)
+
+
+loop
+    exit when GUI.ProcessEvent
+end loop
