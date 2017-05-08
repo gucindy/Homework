@@ -1,0 +1,19 @@
+%b
+const NUMBER:=10
+var numbers : array 1 .. NUMBER of real
+var total:real:=0
+var average:real
+for i : 1 .. 10
+    put "Please enter the daily high temperature: "
+    get numbers (i)
+end for
+
+put "The temperatures you entered are:"
+for  j : 1 .. 10
+    put numbers (j)
+    total += numbers (j)
+end for
+
+average:=total/NUMBER
+
+put"The avrage temperature is ",average,"."
