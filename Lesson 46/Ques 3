@@ -1,0 +1,25 @@
+%c
+const NUMBER:=10
+var numbers : array 1 .. NUMBER of real
+var total:real:=0
+var average:real
+var maxnumber:real:=0
+
+procedure compare (number:real)
+    if number>maxnumber then
+        maxnumber:=number
+     end if
+end compare
+    
+
+for i : 1 .. 10
+    put "Please enter the daily high temperature: "
+    get numbers (i)
+end for
+
+for j : 1 .. 10
+    compare(numbers(j))
+end for
+
+
+put"The highest number is ", maxnumber,"."
