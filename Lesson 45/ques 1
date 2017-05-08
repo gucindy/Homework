@@ -1,0 +1,23 @@
+procedure copy(textcontent:string)
+    var newword:string:=""
+    var number:int
+    for i:1.. length(textcontent)
+        if textcontent(i)>="a" and textcontent(i)<="z" then
+            number:=ord(textcontent(i))-ord("a")+ord("A")
+            newword+=chr(number)
+         else
+            newword+=textcontent(i)
+        end if
+    end for
+    GUI.SetText(text2,newword)
+end copy
+
+
+text1:=GUI.CreateTextField(100,100,100,"",copy)
+text2:=GUI.CreateTextField(300,100,100,"",copy)
+label1:=GUI.CreateLabel(100,100+GUI.GetHeight(text1),"Please enter a word:")
+label2:=GUI.CreateLabel(300,100+GUI.GetHeight(text2),"Your word capitalized:")    
+    
+loop
+    exit when GUI.ProcessEvent
+end loop
