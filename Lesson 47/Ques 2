@@ -1,0 +1,27 @@
+var letter:array 1..26 of char
+var code:array 1..26 of char
+var input:string
+var translation:string:=""
+var number:int
+var random:int
+        
+for i:1..26
+    get letter(i)
+    randint(random,1,5)
+    number:=ord(letter(i))+ random
+    code(i):= chr(number)
+end for
+
+put"Please enter a word: "
+    get input
+      
+for i:1..length(input)
+        for j:1..26
+           if input(i)=letter(j) then
+              translation+= code(j)
+           end if
+           end for
+end for
+
+put "The code of your word is", translation,"."  
+        
