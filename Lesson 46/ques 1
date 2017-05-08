@@ -1,0 +1,12 @@
+%a
+const NUMBER:=10
+var numbers : array 1 .. NUMBER of real
+for i : 1 .. 10
+    put "Please enter the daily high temperature: "
+    get numbers (i)
+end for
+
+put "The daily high temperatures in reverse are "
+for decreasing j : 10 .. 1
+    put numbers (j)
+end for
