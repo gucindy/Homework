@@ -1,0 +1,17 @@
+var item:array 1..10 of string
+var amount:array 1..10 of int
+var getitem:string
+
+for i:1..10 
+    get item(i)
+    get amount(i)
+end for
+
+put"Please enter a item you want to check:"
+get getitem
+for j:1..10 
+    if getitem=item(j) then
+        put item(j)
+        put"You have ",amount(j)," ",item(j)," in inventory."
+    end if
+end for
